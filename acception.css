@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffebee;
+    font-family: 'Arial', sans-serif;
+}
+
+.collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.image-container {
+    position: relative; 
+    margin: 2px;
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.love-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #641540;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none; 
+}
+
+.image-container:hover .love-text {
+    opacity: 1;
+}
